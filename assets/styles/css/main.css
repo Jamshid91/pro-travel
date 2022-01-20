@@ -62,6 +62,12 @@ ul {
   margin: 0 auto;
 }
 
+.title__text {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0499DD;
+}
+
 .header {
   height: 670px;
   background-image: url("../../img/png/bg-img.png");
@@ -254,7 +260,7 @@ ul {
 }
 
 .description-card {
-  width: 160px;
+  width: 180px;
   height: 100px;
   -webkit-border-radius: 10px;
           border-radius: 10px;
@@ -274,6 +280,8 @@ ul {
 }
 
 .description-card .filter {
+  display: none;
+  width: 100%;
   background: rgba(255, 255, 255, 0.2);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
@@ -281,18 +289,26 @@ ul {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
 }
 
-.description-card .filter .price__text {
-  font-size: 24px;
-  font-weight: 700;
-  color: #0499DD;
+.description-card-title {
+  position: relative;
 }
 
 .description-card__text {
   font-size: 14px;
   font-weight: 500;
   color: #282828;
+  position: relative;
+  z-index: 20;
+}
+
+.description-card .price__text {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0499DD;
 }
 
 .calendar {
@@ -302,6 +318,11 @@ ul {
 .calendar-photo {
   width: 60%;
   height: 100%;
+  overflow: hidden;
+  -webkit-border-top-right-radius: 20px;
+          border-top-right-radius: 20px;
+  -webkit-border-bottom-right-radius: 20px;
+          border-bottom-right-radius: 20px;
 }
 
 .calendar-photo__png {
@@ -311,6 +332,15 @@ ul {
           border-top-right-radius: 20px;
   -webkit-border-bottom-right-radius: 20px;
           border-bottom-right-radius: 20px;
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.calendar-photo__png:hover {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .calendar__title {
@@ -389,18 +419,6 @@ ul {
   font-size: 10px;
   font-weight: 500;
   word-wrap: break-word;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
 }
 
 .calendar .fc-scroller {
@@ -469,12 +487,259 @@ ul {
   height: 40px !important;
 }
 
+.costs {
+  margin: 100px 0;
+}
+
+.costs .title__text {
+  margin-bottom: 100px;
+}
+
+.costs .description-card {
+  min-width: 180px;
+  text-align: center;
+}
+
+.costs .description-card__text {
+  font-size: 13.5px;
+  font-weight: 700;
+}
+
+.information {
+  margin-bottom: 150px;
+}
+
+.information .title__text {
+  margin: 50px 0 90px 0;
+}
+
+.information__title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.information-item {
+  margin-top: 40px;
+}
+
+.information-item-pass {
+  margin-right: 25px;
+}
+
+.information-item-pass .circle {
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #FFC700;
+  position: absolute;
+  z-index: -1;
+  top: -15px;
+  left: -15px;
+}
+
+.information-item__text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0499DD;
+}
+
+.information-item__text-info {
+  font-size: 14px;
+  font-weight: 500;
+  color: #282828;
+  margin-top: 20px;
+}
+
+.information .important {
+  width: 100%;
+  height: 130px;
+  background-color: #EDEDED;
+  padding: 40px 25px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+}
+
+.information .important__text {
+  font-size: 14px;
+  font-weight: 500;
+  width: 90%;
+}
+
+.gallery-imgs {
+  margin: 90px auto;
+  max-width: 1350px;
+}
+
+.gallery .openAll {
+  background: transparent;
+  color: #282828;
+}
+
+.gallery .openAll__text {
+  font-weight: 500;
+  font-size: 12px;
+  border-bottom: 2px solid #282828;
+}
+
+.gallery-left {
+  width: 35.5%;
+  overflow: hidden;
+}
+
+.gallery-left-sup {
+  height: 280px;
+}
+
+.gallery-left-sub {
+  margin-top: 20px;
+}
+
+.gallery-left-sub_l {
+  width: 42.5%;
+  height: 260px;
+}
+
+.gallery-left-sub_r {
+  width: 52.5%;
+  height: 260px;
+}
+
+.gallery-left-sub_r2 {
+  width: 100%;
+  height: 120px;
+}
+
+.gallery-middle {
+  width: 25%;
+  height: 560px;
+}
+
+.gallery-right-sub_l {
+  width: 52.5%;
+  height: 260px;
+}
+
+.gallery-right-sub_r {
+  width: 42.5%;
+  height: 260px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+}
+
+.gallery__img {
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+}
+
+.gallery__img:hover {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.form {
+  position: relative;
+}
+
+.form-photo {
+  width: 50%;
+  height: 640px;
+  -webkit-border-top-right-radius: 10px;
+          border-top-right-radius: 10px;
+  overflow: hidden;
+}
+
+.form-photo__png {
+  -webkit-border-top-right-radius: 10px;
+          border-top-right-radius: 10px;
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.form-photo__png:hover {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.footer {
+  background-color: #EDEDED;
+}
+
+.footer-list {
+  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-list:last-child {
+  margin-bottom: 0;
+}
+
+.footer-list:hover path {
+  fill: #FFC700;
+}
+
+.footer-list__link, .footer-list span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #282828;
+  margin-left: 5px;
+}
+
+.footer-list__link:hover, .footer-list span:hover {
+  color: #FFC700;
+}
+
+.footer__email {
+  font-size: 14px;
+  font-weight: 500;
+  color: #282828;
+  cursor: pointer;
+}
+
+.footer__email:hover {
+  color: #FFC700;
+}
+
+.footer__email:hover path {
+  fill: #FFC700;
+}
+
+.mobile_show {
+  display: none;
+}
+
 @media (max-width: 992px) {
   .description-info {
     width: 100%;
   }
   .description-cards {
     width: 100%;
+  }
+  .costs .description-card {
+    min-width: 120px !important;
+  }
+  .information {
+    display: none;
   }
 }
 
@@ -500,11 +765,36 @@ ul {
   .description .tab_card {
     margin-top: 75px;
   }
+  .costs .tab_card {
+    margin-bottom: 70px !important;
+  }
+  .gallery-imgs {
+    margin: 90px auto;
+    max-width: 1350px;
+  }
+  .gallery-left {
+    width: 48.5%;
+  }
+  .gallery-middle {
+    width: 48.5%;
+  }
+  .tab_hidden {
+    display: none;
+  }
+  .mobile_show {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 @media (max-width: 576px) {
   .container {
     padding: 0 20px;
+  }
+  .title__text {
+    font-size: 22px;
   }
   .header .menu-bg-modal {
     width: 75%;
@@ -536,9 +826,61 @@ ul {
   .calendar .fc-title {
     font-size: 8px !important;
   }
+  .gallery-imgs {
+    padding: 0 10px;
+    margin-bottom: 10px;
+  }
+  .gallery-left {
+    width: 48.5%;
+  }
+  .gallery-middle {
+    width: 48.5%;
+    height: 400px;
+  }
+  .gallery-right-sub {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .gallery-right-sub_l, .gallery-right-sub_r {
+    width: 100%;
+    height: 195px;
+  }
+  .gallery-right-sub_r {
+    margin-top: 10px;
+  }
+  .gallery-mob {
+    padding: 0 10px;
+  }
+  .gallery-mob-sub {
+    height: 260px;
+  }
+  .mob_hidden {
+    display: none;
+  }
+  .form {
+    margin-top: 100px;
+  }
+  .form-photo {
+    width: 100%;
+    height: 340px;
+    -webkit-border-radius: 0 !important;
+            border-radius: 0 !important;
+  }
+  .footer-list {
+    font-size: 12px;
+  }
+  .footer-list__link {
+    font-size: 12px;
+  }
+  .footer__email {
+    font-size: 12px;
+  }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 360px) {
   .header-item__sub {
     font-size: 22px;
   }
@@ -550,5 +892,8 @@ ul {
   }
   .header .menu-bg-modal {
     width: 100%;
+  }
+  .calendar .fc-title {
+    font-size: 6px !important;
   }
 }
