@@ -1,0 +1,337 @@
+<!-- Author: Jamshid -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Экскурсии</title>
+    <link rel="shortcut icon" href="assets/img/svg/logo-c.svg" type="image/x-icon">
+    <link rel="stylesheet" href="assets/styles/libs/fc-core.css">
+    <link rel="stylesheet" href="assets/styles/libs/fc-daygrid.css">
+    <link rel="stylesheet" href="assets/styles/libs/fc-timegrid.css">
+    <link rel="stylesheet" href="assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/css/main.css">
+</head>
+<body>
+    <header class="header w-100 position-relative overflow-hidden">
+        <div class="container">
+            <div class="row nav d-flex align-items-center justify-content-between py-4">
+                <div class="col-2">
+                    <a href="#">
+                        <img src="assets/img/svg/logo.svg" alt="">                      
+                    </a>
+                </div>
+
+                <div class=" col-lg-4 offset-lg-6 offset-md-5 col-5">
+                    <ul class="nav-item w-100 d-flex justify-content-between">
+                        <li class="nav-list"> 
+                            <a href="#" class="nav-list__link">Главная</a>
+                        </li>
+                        <li class="nav-list">
+                            <a href="" class="nav-list__link">Экскурсии</a>
+                        </li>
+                        <li class="nav-list">
+                            <a href="" class="nav-list__link">Личный кабинет</a>
+                        </li>
+                    </ul>
+                </div>
+
+                 <div class="col-2">
+                    <div class="menu_burger position-relative">
+                        <div class="menu_burger_list" id="burger_list1"></div>
+                        <div class="menu_burger_list" id="burger_list2"></div>
+                        <div class="menu_burger_list" id="burger_list3"></div>
+                      </div>
+                 </div>
+            </div>
+
+            <div class="menu-bg  w-100 h-100 top-0 start-0 position-absolute">
+                <div class="menu-bg-modal position-absolute top-0 h-100">
+                    <ul class="menu-item">
+                        <li class="menu-list"><a href="" class="menu-list__link">Главная</a></li>
+                        <li class="menu-list"><a href="" class="menu-list__link">Экскурсии</a></li>
+                        <li class="menu-list"><a href="" class="menu-list__link">Личный кабинет</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="header-item position-absolute top-50 translate-middle-y">
+                <h4 class="header-item__sub">Автобусный тур</h4>
+                <h1 class="header-item__title text-white">ЗОЛОТОЕ КОЛЬЦО АБХАЗИИ <br>
+                    (ИЗ АДЛЕРА)</h1>
+                <div class="mt-5 d-flex align-items-center">
+                    <a href="#"><button class="header-item__btn">К  другим экскурсиям
+                        <svg class="mx-2" width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.3536 4.35355C14.5488 4.15829 14.5488 3.84171 14.3536 3.64645L11.1716 0.464466C10.9763 0.269204 10.6597 0.269204 10.4645 0.464466C10.2692 0.659728 10.2692 0.976311 10.4645 1.17157L13.2929 4L10.4645 6.82843C10.2692 7.02369 10.2692 7.34027 10.4645 7.53553C10.6597 7.7308 10.9763 7.7308 11.1716 7.53553L14.3536 4.35355ZM0 4.5H14V3.5H0V4.5Z" fill="white"/>
+                            </svg>
+                    </button></a>
+                    <div class="heart d-flex align-items-center justify-content-center">
+                        <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="heart-path" d="M26.0497 3.76234C25.4112 3.1236 24.6532 2.6169 23.8189 2.2712C22.9845 1.92549 22.0903 1.74756 21.1872 1.74756C20.2841 1.74756 19.3898 1.92549 18.5555 2.2712C17.7211 2.6169 16.9631 3.1236 16.3247 3.76234L14.9997 5.08734L13.6747 3.76234C12.385 2.47273 10.636 1.74823 8.81216 1.74823C6.98837 1.74823 5.23928 2.47273 3.94966 3.76234C2.66005 5.05196 1.93555 6.80105 1.93555 8.62484C1.93555 10.4486 2.66005 12.1977 3.94966 13.4873L5.27466 14.8123L14.9997 24.5373L24.7247 14.8123L26.0497 13.4873C26.6884 12.8489 27.1951 12.0909 27.5408 11.2565C27.8865 10.4222 28.0644 9.52795 28.0644 8.62484C28.0644 7.72173 27.8865 6.82747 27.5408 5.99315C27.1951 5.15882 26.6884 4.40079 26.0497 3.76234V3.76234Z" stroke="#D4D4D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End header -->
+
+    <section class="description">
+        <div class="container">
+            <div class="row d-flex justify-content-between align-items-center">
+                <div class="col-lg-4 col-md-5 col-12">
+                    <h2 class="description-info__title">Описание экскурсии</h2>
+                    <p class="description-info__text">Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок. </p>
+                </div>
+
+                    <div class="col-md-2 col-sm-4 col-6 offset-lg-1 d-flex justify-content-center tab_card">
+                        <div class="description-card position-relative">
+                            <div class="circle"></div>
+                            <div class="filter d-flex justify-content-center align-items-center flex-column position-absolute top-0 start-0 w-100 h-100">
+                                <div class="description-card-title">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.4002 8.83994C22.8023 8.83994 25.5602 7.85497 25.5602 6.63994C25.5602 5.42492 22.8023 4.43994 19.4002 4.43994C15.9982 4.43994 13.2402 5.42492 13.2402 6.63994C13.2402 7.85497 15.9982 8.83994 19.4002 8.83994Z" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M13.2402 7.08008C13.2402 7.48136 13.2402 9.3188 13.2402 9.72008C13.2402 10.9349 15.9973 11.9201 19.4002 11.9201C22.8032 11.9201 25.5602 10.9349 25.5602 9.72008C25.5602 9.3188 25.5602 7.48136 25.5602 7.08008" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M16.5625 14.7531C17.4117 14.9106 18.3771 14.9999 19.4005 14.9999C22.8035 14.9999 25.5605 14.0148 25.5605 12.7999C25.5605 12.3986 25.5605 10.5612 25.5605 10.1599" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M13.2402 10.1599C13.2402 10.5612 13.2402 12.0387 13.2402 12.0387" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M16.7715 17.8701C17.5688 18.0047 18.4598 18.08 19.4005 18.08C22.8034 18.08 25.5605 17.0953 25.5605 15.88C25.5605 15.4787 25.5605 13.6413 25.5605 13.24" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M16.7373 20.9445C17.5429 21.0826 18.4463 21.1601 19.4002 21.1601C22.8031 21.1601 25.5602 20.1753 25.5602 18.9601C25.5602 18.5588 25.5602 16.7213 25.5602 16.3201" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M10.5995 16.3199C14.0015 16.3199 16.7595 15.3349 16.7595 14.1199C16.7595 12.9049 14.0015 11.9199 10.5995 11.9199C7.19738 11.9199 4.43945 12.9049 4.43945 14.1199C4.43945 15.3349 7.19738 16.3199 10.5995 16.3199Z" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4.43945 14.5601C4.43945 14.9613 4.43945 16.7988 4.43945 17.2001C4.43945 18.4153 7.19649 19.4001 10.5995 19.4001C14.0024 19.4001 16.7595 18.4153 16.7595 17.2001C16.7595 16.7988 16.7595 14.9613 16.7595 14.5601" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4.43945 17.6399C4.43945 18.0412 4.43945 19.8786 4.43945 20.2799C4.43945 21.4952 7.19649 22.4799 10.5995 22.4799C14.0024 22.4799 16.7595 21.4952 16.7595 20.2799C16.7595 19.8786 16.7595 18.0412 16.7595 17.6399" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4.43945 20.72C4.43945 21.1213 4.43945 22.9587 4.43945 23.36C4.43945 24.5753 7.19649 25.56 10.5995 25.56C14.0024 25.56 16.7595 24.5753 16.7595 23.36C16.7595 22.9587 16.7595 21.1213 16.7595 20.72" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span class="price__text">1 618 ₽</span>
+                                </div>
+                                <p class="description-card__text">Взрослый билет</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-6 d-flex justify-content-center tab_card">
+                        <div class="description-card position-relative">
+                            <div class="circle"></div>
+                            <div class="filter d-flex justify-content-center align-items-center flex-column position-absolute top-0 start-0 w-100 h-100">
+                                <div class="description-card-title">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.4002 8.83994C22.8023 8.83994 25.5602 7.85497 25.5602 6.63994C25.5602 5.42492 22.8023 4.43994 19.4002 4.43994C15.9982 4.43994 13.2402 5.42492 13.2402 6.63994C13.2402 7.85497 15.9982 8.83994 19.4002 8.83994Z" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M13.2402 7.08008C13.2402 7.48136 13.2402 9.3188 13.2402 9.72008C13.2402 10.9349 15.9973 11.9201 19.4002 11.9201C22.8032 11.9201 25.5602 10.9349 25.5602 9.72008C25.5602 9.3188 25.5602 7.48136 25.5602 7.08008" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M16.5625 14.7531C17.4117 14.9106 18.3771 14.9999 19.4005 14.9999C22.8035 14.9999 25.5605 14.0148 25.5605 12.7999C25.5605 12.3986 25.5605 10.5612 25.5605 10.1599" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M13.2402 10.1599C13.2402 10.5612 13.2402 12.0387 13.2402 12.0387" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M16.7715 17.8701C17.5688 18.0047 18.4598 18.08 19.4005 18.08C22.8034 18.08 25.5605 17.0953 25.5605 15.88C25.5605 15.4787 25.5605 13.6413 25.5605 13.24" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M16.7373 20.9445C17.5429 21.0826 18.4463 21.1601 19.4002 21.1601C22.8031 21.1601 25.5602 20.1753 25.5602 18.9601C25.5602 18.5588 25.5602 16.7213 25.5602 16.3201" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M10.5995 16.3199C14.0015 16.3199 16.7595 15.3349 16.7595 14.1199C16.7595 12.9049 14.0015 11.9199 10.5995 11.9199C7.19738 11.9199 4.43945 12.9049 4.43945 14.1199C4.43945 15.3349 7.19738 16.3199 10.5995 16.3199Z" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4.43945 14.5601C4.43945 14.9613 4.43945 16.7988 4.43945 17.2001C4.43945 18.4153 7.19649 19.4001 10.5995 19.4001C14.0024 19.4001 16.7595 18.4153 16.7595 17.2001C16.7595 16.7988 16.7595 14.9613 16.7595 14.5601" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4.43945 17.6399C4.43945 18.0412 4.43945 19.8786 4.43945 20.2799C4.43945 21.4952 7.19649 22.4799 10.5995 22.4799C14.0024 22.4799 16.7595 21.4952 16.7595 20.2799C16.7595 19.8786 16.7595 18.0412 16.7595 17.6399" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4.43945 20.72C4.43945 21.1213 4.43945 22.9587 4.43945 23.36C4.43945 24.5753 7.19649 25.56 10.5995 25.56C14.0024 25.56 16.7595 24.5753 16.7595 23.36C16.7595 22.9587 16.7595 21.1213 16.7595 20.72" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span class="price__text">1 618 ₽</span>
+                                </div>
+                                <p class="description-card__text">Взрослый билет</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-12 d-flex justify-content-center tab_card">
+                        <div class="description-card position-relative">
+                            <div class="circle"></div>
+                            <div class="filter d-flex justify-content-center align-items-center flex-column position-absolute top-0 start-0 w-100 h-100">
+                                <div class="description-card-title">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.4002 8.83994C22.8023 8.83994 25.5602 7.85497 25.5602 6.63994C25.5602 5.42492 22.8023 4.43994 19.4002 4.43994C15.9982 4.43994 13.2402 5.42492 13.2402 6.63994C13.2402 7.85497 15.9982 8.83994 19.4002 8.83994Z" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M13.2402 7.08008C13.2402 7.48136 13.2402 9.3188 13.2402 9.72008C13.2402 10.9349 15.9973 11.9201 19.4002 11.9201C22.8032 11.9201 25.5602 10.9349 25.5602 9.72008C25.5602 9.3188 25.5602 7.48136 25.5602 7.08008" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M16.5625 14.7531C17.4117 14.9106 18.3771 14.9999 19.4005 14.9999C22.8035 14.9999 25.5605 14.0148 25.5605 12.7999C25.5605 12.3986 25.5605 10.5612 25.5605 10.1599" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M13.2402 10.1599C13.2402 10.5612 13.2402 12.0387 13.2402 12.0387" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M16.7715 17.8701C17.5688 18.0047 18.4598 18.08 19.4005 18.08C22.8034 18.08 25.5605 17.0953 25.5605 15.88C25.5605 15.4787 25.5605 13.6413 25.5605 13.24" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M16.7373 20.9445C17.5429 21.0826 18.4463 21.1601 19.4002 21.1601C22.8031 21.1601 25.5602 20.1753 25.5602 18.9601C25.5602 18.5588 25.5602 16.7213 25.5602 16.3201" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M10.5995 16.3199C14.0015 16.3199 16.7595 15.3349 16.7595 14.1199C16.7595 12.9049 14.0015 11.9199 10.5995 11.9199C7.19738 11.9199 4.43945 12.9049 4.43945 14.1199C4.43945 15.3349 7.19738 16.3199 10.5995 16.3199Z" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4.43945 14.5601C4.43945 14.9613 4.43945 16.7988 4.43945 17.2001C4.43945 18.4153 7.19649 19.4001 10.5995 19.4001C14.0024 19.4001 16.7595 18.4153 16.7595 17.2001C16.7595 16.7988 16.7595 14.9613 16.7595 14.5601" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4.43945 17.6399C4.43945 18.0412 4.43945 19.8786 4.43945 20.2799C4.43945 21.4952 7.19649 22.4799 10.5995 22.4799C14.0024 22.4799 16.7595 21.4952 16.7595 20.2799C16.7595 19.8786 16.7595 18.0412 16.7595 17.6399" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4.43945 20.72C4.43945 21.1213 4.43945 22.9587 4.43945 23.36C4.43945 24.5753 7.19649 25.56 10.5995 25.56C14.0024 25.56 16.7595 24.5753 16.7595 23.36C16.7595 22.9587 16.7595 21.1213 16.7595 20.72" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span class="price__text">1 618 ₽</span>
+                                </div>
+                                <p class="description-card__text">Взрослый билет</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <!-- End section -->
+
+    <section class="calendar position-relative">
+        <div class="calendar-photo position-absolute top-0 start-0">
+            <img src="assets/img/png/calendar.png" alt="" class="calendar-photo__png position-absolute top-0 start-0 w-100 h-100">
+        </div>
+        <div class="container h-100 d-flex align-items-center justify-content-center">
+            <div class="row d-flex justify-content-end">
+                <div class="col-lg-6 col-md-10 col-12">
+                    <h3 class="calendar__title"><span>Календарь путешествий</span></h3>
+                    <div class="calendar-item">
+                        <div id='calendar' class="w-100"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <script src="assets/js/libs/fc-core.js"></script>
+    <script src="assets/js/libs/fc-inter.js"></script>
+    <script src="assets/js/libs/fc-daygrid.js"></script>
+    <script src="assets/js/libs/fc-timegrid.js"></script>
+    <script src="assets/js/libs/fc-list.js"></script>
+    <script src="assets/js/index.js"></script>
+
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            function handleDatesRender(arg) {
+                console.log('viewType:', arg.view.calendar.state.viewType);
+            }
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                plugins: [ 'interaction', 'dayGrid', 'timeGrid', 'list'],
+                defaultView: 'dayGridMonth',
+                datesRender: handleDatesRender,
+                firstDay: 1,
+                locale: 'ru',
+                defaultDate: '2021-11-06',
+                header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+                },
+                events: [
+                {
+                    title: '06:00-20:00',
+                    start: '2021-11-07',
+                    end: '2021-11-07'
+                },
+                {
+                    title: '06:00-20:00',
+                    start: '2021-11-08',
+                    end: '2021-11-08'
+                },
+                {
+                    title: '06:00-20:00',
+                    start: '2021-11-09',
+                    end: '2021-11-09'
+                },
+                {
+                    title: '06:00-20:00',
+                    start: '2021-11-10',
+                    end: '2021-11-10'
+                },
+                {
+                    title: '06:00-20:00',
+                    start: '2021-11-11',
+                    end: '2021-11-11'
+                },
+                {
+                    title: '06:00-20:00',
+                    start: '2021-11-12',
+                    end: '2021-11-12'
+                },
+                {
+                    title: '06:00-20:00',
+                    start: '2021-11-13',
+                    end: '2021-11-13'
+                },
+                {
+                    title: '06:00-20:00',
+                    start: '2021-11-14',
+                    end: '2021-11-14'
+                },
+                {
+                    title: '06:00-20:00',
+                    start: '2021-11-15',
+                    end: '2021-11-15'
+                },
+                {
+                    title: '06:00-20:00',
+                    start: '2021-11-16',
+                    end: '2021-11-16'
+                },
+                {
+                    title: '06:00-20:00',
+                    start: '2021-11-17',
+                    end: '2021-11-17'
+                },
+                {
+                    title: '06:00-20:00',
+                    start: '2021-11-18',
+                    end: '2021-11-18'
+                },
+                {
+                    title: '06:00-20:00',
+                    start: '2021-11-19',
+                    end: '2021-11-19'
+                },
+                {
+                    title: '06:00-20:00',
+                    start: '2021-11-20',
+                    end: '2021-11-20'
+                },
+                {
+                    title: '06:00-20:00',
+                    start: '2021-11-21',
+                    end: '2021-11-21'
+                },
+                {
+                    title: '06:00-20:00',
+                    start: '2021-11-22',
+                    end: '2021-11-22'
+                },
+                {
+                    title: '06:00-20:00',
+                    start: '2021-11-23',
+                    end: '2021-11-23'
+                },
+                {
+                    title: '06:00-20:00',
+                    start: '2021-11-24',
+                    end: '2021-11-24'
+                },
+                {
+                    title: '06:00-20:00',
+                    start: '2021-11-25',
+                    end: '2021-11-25'
+                },
+                {
+                    title: '06:00-20:00',
+                    start: '2021-11-26',
+                    end: '2021-11-26'
+                },
+                {
+                    title: '06:00-20:00',
+                    start: '2021-11-27',
+                    end: '2021-11-27'
+                },
+                {
+                    title: '06:00-20:00',
+                    start: '2021-11-28',
+                    end: '2021-11-28'
+                },
+                {
+                    title: '06:00-20:00',
+                    start: '2021-11-29',
+                    end: '2021-11-29'
+                },
+                {
+                    title: '06:00-20:00',
+                    start: '2021-11-30',
+                    end: '2021-11-30'
+                },
+                ]
+            });
+
+            calendar.render();
+    });
+
+
+    </script>
+</body>
+</html>

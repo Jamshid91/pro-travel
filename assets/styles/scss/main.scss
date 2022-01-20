@@ -1,0 +1,368 @@
+@import './font';
+@import './color';
+
+*,*::after,*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
+}
+
+input,textarea,button {
+    border: none;
+    outline: none;
+}
+input:focus,textarea:focus,button:focus {
+    border: none;
+    outline: none;
+}
+button {
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Montserrat', sans-serif;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1120px !important;
+    margin: 0 auto;
+}
+
+.header {
+    height: 670px;
+    background-image: url('../../img/png/bg-img.png');
+    background-size: cover;
+
+    .nav {
+        &-list__link {
+            font-size: 14px;
+            color: $white;
+            font-weight: 500;
+
+            &:hover {
+                color: $yellow;
+            }
+        }
+        
+        .menu_burger {
+            z-index: 10;
+            display: none;
+
+            &_list {
+                width: 40px;
+                height: 4px;
+                background-color: #fff;
+                border-radius: 5px;
+                transition: 0.5s;
+                }
+        }
+        #burger_list1 {
+            transform: translateY(-4px);
+        }
+        
+        #burger_list3 {
+            transform: translateY(4px);
+        }
+        
+        .change .menu_burger_list {
+            background-color: red;
+        }
+        
+        .change #burger_list1 {
+            transform: translateY(4px) rotate(-45deg);
+        }
+        
+        .change #burger_list3 {
+            transform: translateY(-2px) rotate(45deg);
+        }
+        
+        .change #burger_list2 {
+            opacity: 0;
+        }
+    }
+    .menu-bg {
+        background-color: #0007;
+        z-index: 5;
+        visibility: hidden;
+
+        &-modal {
+            right: -500px;
+            width: 50%;
+            background: linear-gradient(92.71deg, #0499DD 0%, #17C1BC 100%);
+            padding: 150px 50px;
+            transition: .3s;
+            
+            .menu-list {
+                margin-bottom: 25px;
+
+                &__link {
+                    color: $white;
+                    font-size: 22px;
+                    font-weight: 700;
+                }
+            }
+        }
+        .showModal {
+            right: 0;
+        }
+    }
+    .showMenu {
+        visibility: visible;
+    }
+
+    &-item {
+        &__sub {
+            color: $yellow;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 30px;
+        }
+        &__title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-top: 15px;
+        }
+        &__btn {
+            width: 270px;
+            height: 50px;
+            background: linear-gradient(92.71deg, #0499DD 0%, #17C1BC 100%);
+            border-radius: 60px;
+            color: $white;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        .heart {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(153, 135, 144, 0.37);
+            cursor: pointer;
+            margin-left: 15px;
+        }
+        .addLike .heart-path{
+            stroke: red;
+        }
+        .addLike svg{
+            fill: red;
+            animation: animLike .3s linear;
+        }
+        @keyframes animLike {
+            from {
+                width: 30px;
+                height: 26px;
+            }
+            to {
+                width: 45px;
+                height: 35px;
+            }
+        }
+    }
+}
+// End header
+
+.description {
+    margin: 150px 0;
+    background-color: #fff;
+    &-info {
+        width: 35%;
+
+        &__title {
+            font-size: 24px;
+            font-weight: 700;
+            color: $blue;
+        }
+        &__text {
+            font-size: 14px;
+            font-weight: 500;
+            color: $black;
+            margin-top: 40px;
+        }
+    }
+    &-card {
+        width: 160px;
+        height: 100px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+
+        .circle {
+            width: 57px;
+            height: 57px;
+            border-radius: 50%;
+            background-color: $yellow;
+            position: absolute;
+            top: -17px;
+            left: -17px;
+        }
+        .filter {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(20px);
+            display: flex;
+
+            .price__text {
+                font-size: 24px;
+                font-weight: 700;
+                color: $blue;
+            }
+        }
+        &__text {
+            font-size: 14px;
+            font-weight: 500;
+            color: $black;
+        }
+    }
+}
+// End description
+
+.calendar {
+    height: 877px;
+    &-photo {
+        width: 60%;
+        height: 100%;
+
+        &__png {
+            object-fit: cover;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+    }
+    &__title {
+        position: relative;
+        z-index: 10;
+        font-size: 24px;
+        font-weight: 700;
+        color: $blue;
+        margin-bottom: 70px;
+        text-align: right;
+
+        span {
+            background-color: #fff;
+            padding: 2px 10px;
+        }
+    }
+    &-item {
+        background-color: $gray;
+        position: relative;
+        z-index: 5;
+        padding: 30px 15px;
+        border-radius: 10px;
+    }
+    table {
+        border-collapse: collapse !important;
+    }
+    td {
+        text-align: center;
+        height: 100%;
+        position: relative;
+        width: 20px !important;
+        height: 20px !important;
+        padding: 0;
+        margin: 0;
+    }
+    .fc-unthemed .fc-content, .fc-unthemed .fc-divider, .fc-unthemed .fc-list-heading td, .fc-unthemed .fc-list-view, .fc-unthemed .fc-popover, .fc-unthemed .fc-row, .fc-unthemed tbody, .fc-unthemed td, .fc-unthemed th, .fc-unthemed thead{
+        border: none;
+
+    }
+    .fc-ltr .fc-dayGrid-view .fc-day-top .fc-day-number {
+        float: none;
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 99;
+        // transform: translate(-50%, -50%);
+    }
+    .fc-day-grid-event {
+        top: 0px;
+        background: transparent;
+        color: $blue;
+        border: none;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+    .fc-title {
+        font-size: 10px;
+        font-weight: 500;
+        word-wrap: break-word;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+    .fc-scroller {
+        height: auto !important;
+        overflow: visible !important;
+    }
+    .fc-dayGridMonth-button,
+    .fc-timeGridDay-button,
+    .fc-listWeek-button,
+    .fc-today-button,
+    .fc-timeGridWeek-button {
+        display: none !important;
+    }
+    .fc-header-toolbar {
+        position: relative;
+    }
+    .fc-button-group {
+        position: static;
+    }
+    .fc-button-group button {
+        position: absolute;
+        color: $blue;
+        background: transparent;
+        outline: none !important;
+        margin: 0;
+        padding: 0;
+        width: auto;
+        height: auto;
+        border: none !important;
+        top: -5px;
+        border: transparent;
+    }
+    .fc-button-group button span{
+        font-size: 35px;
+        font-weight: 500;
+    }
+    .fc-next-button {
+        right: 0 !important;
+    }
+    .fc-center h2 {
+        color: $blue;
+        font-size: 24px;
+        font-weight: 700;
+        // text-transform: capitalize;
+    }
+    .fc-header-toolbar {
+        margin-bottom: 50px;
+    }
+    .fc-head  {
+        height: 50px;
+    }
+    .fc-dayGrid-view .fc-body .fc-row {
+        min-height: auto;
+    }
+    .fc-widget-content {
+        height: 40px !important;
+    }
+}
+
+@import './media'

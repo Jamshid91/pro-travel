@@ -1,0 +1,107 @@
+@media (max-width: 992px) {
+.description {
+    &-info {
+        width: 100%;
+    }
+
+    &-cards {
+        width: 100%;
+    }
+}
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 70px;
+    }
+    
+    .header {
+        height: 100vh;
+        .nav-item {
+            visibility: hidden;
+        }
+        .nav {
+            .menu_burger {
+                display: block;
+            }
+        }
+        &-item {
+            &__title {
+                font-size: 36px;
+            }
+        }
+    }
+    // End header
+
+    
+.description {
+    &-info {
+        width: 100%;
+    }
+    .tab_card {
+        margin-top: 75px;
+    }
+}
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 20px;
+    }
+    .header {
+        .menu-bg {
+            &-modal {
+                width: 75%;
+                padding-right: 25px;
+            }
+        }
+    }
+    .description {
+        &-cards {
+            margin-top: 0;
+            justify-content: center;
+            text-align: center;
+            align-content: center;
+        }
+    }
+    .calendar {
+        .container {
+            padding: 0;
+        }
+        &-item {
+            padding: 15px 5px;
+        }
+        &-photo {
+            width: 80%;
+        }
+        &__title {
+            text-align: center;
+        }
+        .fc-title {
+            font-size: 8px !important;
+        }
+    }
+    
+}
+
+@media (max-width: 380px) {
+    .header {
+        &-item {
+            &__sub {
+                font-size: 22px;
+            }
+            &__title {
+                font-size: 30px;
+            }
+            &__btn {
+                width: 250px;
+            }
+        }
+        .menu-bg {
+            &-modal {
+                width: 100%;
+            }
+        }
+    }
+    // End header
+}
