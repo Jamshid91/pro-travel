@@ -81,6 +81,12 @@
     .mobile_show {
         display: flex;;
     }
+    .big-photo {
+        &-item {
+            width: 100%;
+            height: 95%;
+        }
+    }
 }
 
 @media (max-width: 576px) {
