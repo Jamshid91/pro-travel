@@ -159,3 +159,20 @@ document.addEventListener('DOMContentLoaded', function() {
   calendar.render();
 });
 
+// Галерея тура
+
+let galleryImgs = document.querySelectorAll('.gallery__img');
+let bigPhoto = document.querySelector('.big-photo');
+let bigPhotoImg = document.querySelector('.big-photo__img');
+let closePhoto = document.querySelector('.close__photo');
+
+galleryImgs.forEach(img => {
+    img.addEventListener('click', () => {
+        bigPhoto.classList.add('d-flex');
+        bigPhotoImg.src = img.src
+    })
+});
+
+closePhoto.addEventListener('click', () => {
+    bigPhoto.classList.remove('d-flex')
+})
