@@ -167,37 +167,42 @@ section {
             height: 50px;
             background: linear-gradient(92.71deg, #0499DD 0%, #17C1BC 100%);
             border-radius: 60px;
-            color: $white;
+            color: $white !important;
             font-size: 14px;
             font-weight: 700;
-        }
-        .heart {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: rgba(153, 135, 144, 0.37);
-            cursor: pointer;
-            margin-left: 15px;
-        }
-        .addLike .heart-path{
-            stroke: red;
-        }
-        .addLike svg{
-            fill: red;
-            animation: animLike .3s linear;
-        }
-        @keyframes animLike {
-            from {
-                width: 30px;
-                height: 26px;
-            }
-            to {
-                width: 45px;
-                height: 35px;
+
+            &:hover {
+                color: $white !important;
             }
         }
     }
 }
+
+    .heart {
+        min-width: 50px;
+        min-height: 50px;
+        border-radius: 50%;
+        background-color: rgba(153, 135, 144, 0.37);
+        cursor: pointer;
+        margin-left: 15px;
+    }
+    .addLike .heart-path{
+        stroke: red;
+    }
+    .addLike svg{
+        fill: red;
+        animation: animLike .3s linear;
+    }
+    @keyframes animLike {
+        from {
+            width: 30px;
+            height: 26px;
+        }
+        to {
+            width: 45px;
+            height: 35px;
+        }
+    }
 // End header
 
 .description {
@@ -467,7 +472,7 @@ section {
         width: 140px;
     }
     
-}
+
 
 .owl-theme .owl-dots, .owl-theme .owl-nav {
     display: flex;
@@ -514,6 +519,7 @@ button:hover {
 }
 button span:hover {
     background-color: transparent !important;
+}
 }
 // End route
 
@@ -701,10 +707,12 @@ button span:hover {
     }
 }
 // End reviews
-.form {
+.book-trip {
+    height: 640px;
     position: relative;
 
     &-photo {
+        position: absolute;
         width: 50%;
         height: 640px;
         border-top-right-radius: 10px;
@@ -716,6 +724,125 @@ button span:hover {
             &:hover {
                 transform: scale(1.2);
             }
+        }
+    }
+    .form {
+        .title__text {
+            margin-bottom: 90px;
+        }
+        &__label {
+            width: 100%;
+            height: 50px;
+            background: #FFFFFF;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+            position: relative;
+            
+            svg {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 25px;
+                cursor: pointer;
+            }
+        }
+        .error {
+            position: absolute;
+            bottom: -20px;
+            left: 5px;
+            font-size: 14px;
+            font-weight: 500;
+            color: tomato;
+        }
+        &__inp {
+            width: 100%;
+            height: 50px;
+            padding: 0 25px;
+            background-color: #fff;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: $black;
+            border-radius: 10px;
+        }
+
+        .select {
+            width: 100%;
+            height: 50px;
+            background: #FFFFFF;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+            position: relative;
+
+            &-item {
+                width: 100%;
+
+                svg {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 25px;
+                }
+            }
+            &-lists {
+                width: 100%;
+                max-height: 180px;
+                overflow-y: scroll;
+                position: absolute;
+                top: 35px;
+                left: 0;
+                background-color: #fff;
+                display: none;
+                z-index: 10;
+                padding-top: 15px;
+                
+                &::-webkit-scrollbar {
+                    width: 6px;
+                }
+                &::-webkit-scrollbar-track {
+                    background-color: $gray;
+                    border-radius: 5px;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background: $yellow; 
+                    border-radius: 5px;
+                }
+            }
+            &-list {
+                padding: 10px 25px;
+                font-size: 14px;
+                font-weight: 500;
+                color: $black;
+                transition: .3s;
+
+                &:last-child {
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+                cursor: pointer;
+                &:hover {
+                    background-color: $blue;
+                    color: $white;
+                }
+            }
+        }
+        &__btn {
+            width: 265px;
+            height: 50px;
+            background: linear-gradient(92.71deg, #0499DD 0%, #17C1BC 100%);
+            border-radius: 60px;
+            color: $white;
+            font-size: 14px;
+            font-weight: 700;
+
+            &:hover {
+                color: $white !important;
+            }
+        }
+        .heart {
+            background-color: #EDEDED;
         }
     }
 }

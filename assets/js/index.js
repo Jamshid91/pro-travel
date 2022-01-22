@@ -1,11 +1,13 @@
-let heart = document.querySelector('.header .heart');
+let hearts = document.querySelectorAll('.heart');
 let menuBurger = document.querySelector('.menu_burger');
 let menuBg = document.querySelector('.header .menu-bg');
 let menuModal = document.querySelector('.header .menu-bg-modal');
 
-heart.addEventListener('click', () => {
-    heart.classList.toggle('addLike')
-});
+hearts.forEach(heart => {
+    heart.addEventListener('click', () => {
+        heart.classList.toggle('addLike')
+    });
+})
 
 menuBurger.addEventListener('click', () => {
   menuBurger.classList.toggle('change');
@@ -190,4 +192,95 @@ $('.owl-carousel').owlCarousel({
             items:1
         },
     }
+    });
+
+
+    // Забронировать тур
+
+    let selects = document.querySelectorAll('.form .select');
+    let selectLists = document.querySelectorAll('.form .select .select-list');
+
+    selects.forEach(e => {
+        e.addEventListener('click', () => {
+            e.children[1].classList.toggle('d-block')
+        });
+    });
+
+    selectLists.forEach(list => {
+        list.addEventListener('click', () => {
+            list.parentElement.parentElement.classList.toggle('d-block');
+            list.parentElement.parentElement.children[0].children[0].value = list.textContent
+        })
+    });
+
+    // Start Form
+let form = document.getElementById('form');
+let adults = document.getElementById('adults');
+let childs = document.getElementById('childs');
+let calendar = document.getElementById('datepicker');
+let submitBtn = document.getElementById('submitForm')
+
+
+submitBtn.addEventListener('click', () => {
+  checkInputs()
+
+  let successAdults = adults.parentElement.children[3].classList;
+  let successCalendar = calendar.parentElement.children[3].classList;
+  let successChilds = childs.parentElement.children[3].classList;
+
+  if(successAdults == 'success' && successCalendar == 'success' && successChilds == 'success') {
+    submitBtn.type = 'submit'
+  }
+});
+
+function checkInputs() {
+    const calendarValue = calendar.value.trim();
+  const adultsValue = adults.value.trim();
+  const childsValue = childs.value.trim();
+
+
+  if(calendarValue=== '') {
+    setErrorFor(calendar, "Введите день, месяц и год")
+  } else {
+    setSuccesFor(calendar)
+    calendar.parentElement.children[3].classList.add('success')
+  }
+
+  if(adultsValue === '') {
+    setErrorFor(adults, "заполнить поле")
+  }
+  else {
+    setSuccesFor(adults)
+    adults.parentElement.children[3].classList.add('success')
+  }
+
+  if(childsValue === '') {
+    setErrorFor(childs, "заполнить поле")
+  } else {
+    setSuccesFor(childs)
+    childs.parentElement.children[3].classList.add('success')
+  }
+}
+
+function setErrorFor(input, message) {
+let small = input.parentElement.children[2]
+
+    input.classList.add('inputError');
+
+    small.innerText = message
+}
+
+function setSuccesFor(input) {
+let small = input.parentElement.children[2]
+    small.innerText = ''
+} 
+// End Form
+
+
+
+    
+    $(function() {
+        $('#datepicker').datepicker({
+            dateFormat: 'dd MM yyyy'
+        })
     })
