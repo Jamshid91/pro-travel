@@ -175,4 +175,19 @@ galleryImgs.forEach(img => {
 
 closePhoto.addEventListener('click', () => {
     bigPhoto.classList.remove('d-flex')
-})
+});
+
+
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:20,
+    nav:true,
+    dots:true,
+    touchDrag: true,
+    mouseDrag:true,
+    responsive:{
+        0:{
+            items:1
+        },
+    }
+    })

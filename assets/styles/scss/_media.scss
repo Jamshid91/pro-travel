@@ -1,4 +1,7 @@
 @media (max-width: 992px) {
+    .container {
+        padding: 0 50px;
+    }
 .description {
     &-info {
         width: 100%;
@@ -17,6 +20,46 @@
     .information {
         display: none;
     }
+   
+    .route {
+        .owl-carousel .owl-stage-outer {
+            width: 1000px !important;
+        }
+        .owl-theme .owl-dots, .owl-theme .owl-nav {
+            margin-left: 100px;
+        }
+        .owl-theme .owl-dots .owl-dot span {
+            width: 150px;
+        }
+    }
+    // End route
+
+    
+    .reviews {
+        margin: 60px auto 150px auto;
+        overflow-x: hidden;
+
+        &-item {
+            padding: 20px 15px 20px 30px;
+            &__text {
+                font-size: 12px;
+            }
+        }
+
+        &-carousel {
+            margin-top: 90px;
+        }
+        .review-photo {
+            min-width: 165px;
+            min-height: 165px;
+            margin-right: 20px;
+        }
+        
+        .owl-theme .owl-dots .owl-dot span {
+            width: 180px;
+        }
+    }
+    // End reviews
 }
 
 @media (max-width: 768px) {
@@ -85,6 +128,12 @@
         &-item {
             width: 100%;
             height: 95%;
+        }
+    }
+
+    .reviews {
+        .owl-theme .owl-dots .owl-dot span {
+            width: 120px;
         }
     }
 }
@@ -172,6 +221,44 @@
         }
     }
 
+        
+    .route {
+        .owl-theme .owl-dots .owl-dot span {
+            width: 110px;
+        }
+    }
+    // End route
+
+    
+    .reviews {
+        margin: 60px auto 150px auto;
+        overflow-x: hidden;
+
+        &-item {
+            padding: 20px 15px 20px 30px;
+            flex-direction: column;
+            &__text {
+                font-size: 12px;
+            }
+        }
+
+        &-carousel {
+            margin-top: 90px;
+        }
+        .review-photo {
+            min-width: 80px;
+            min-height: 80px;
+            margin-right: 0px;
+            margin-bottom: 20px;
+        }
+        .owl-theme .owl-dots .owl-dot span {
+            width: 70px;
+        }
+    }
+    // End reviews
+
+    
+
     .footer {
         
     &-list {
@@ -185,7 +272,7 @@
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 375px) {
     .header {
         &-item {
             &__sub {
@@ -208,6 +295,23 @@
     .calendar {
         .fc-title {
             font-size: 6px !important;
+        }
+    }
+    
+    
+    .route {
+        .owl-theme .owl-dots, .owl-theme .owl-nav {
+            margin-left: 100px;
+        }
+        .owl-theme .owl-dots .owl-dot span {
+            width: 80px;
+        }
+    }
+    // End route
+
+    .reviews {
+        .owl-theme .owl-dots .owl-dot span {
+            width: 50px;
         }
     }
 }

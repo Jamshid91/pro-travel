@@ -48,10 +48,24 @@ ul {
     margin: 0 auto;
 }
 
+section {
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
 .title__text {
     font-size: 24px;
     font-weight: 700;
     color: $blue;
+}
+.openAll {
+    background: transparent;
+    color: $black;
+    &__text {
+        font-weight: 500;
+        font-size: 12px;
+        border-bottom: 2px solid $black;
+    }
 }
 
 .header {
@@ -187,7 +201,7 @@ ul {
 // End header
 
 .description {
-    margin: 150px 0;
+    margin: 150px auto;
     background-color: #fff;
     &-info {
         width: 35%;
@@ -386,8 +400,125 @@ ul {
 }
 // End calendar
 
+.route {
+    margin: 200px auto 150px auto;
+    position: relative;
+    overflow-x: hidden;
+    .title__text {
+        margin-bottom: 80px;
+    }
+    &__item-text {
+        margin: 40px 0;
+        font-size: 14px;
+        font-weight: 700;
+        color: $black;
+        margin-left: 38px;
+    }
+
+    &__list {
+        margin-bottom: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        color: $black;
+        display: flex;
+        align-items: flex-start;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &::before {
+            content: '';
+            display: block;
+            min-width: 12px;
+            min-height: 12px;
+            border-radius: 50%;
+            background-color: $yellow;
+            margin-right: 25px;
+        }
+    }
+    .carousel {
+        .owl-item {
+            border-radius: 20px;
+            max-height: 500px !important;
+            position: relative;
+
+            .carousel__img {
+                border-radius: 10px;
+                width: 100%;
+                height: 500px;
+                object-fit: cover;
+            }
+            .item__text {
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                color: $yellow;
+                z-index: 5;
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+    }
+    .owl-carousel .owl-stage-outer {
+        max-height: 500px;
+        width: 550px !important;
+        overflow-y: hidden;
+    }
+    .owl-theme .owl-dots .owl-dot span {
+        width: 140px;
+    }
+    
+}
+
+.owl-theme .owl-dots, .owl-theme .owl-nav {
+    display: flex;
+    margin-left: 100px;
+}
+.owl-theme .owl-dots .owl-dot span {
+    height: 4px;
+    margin: 0;
+    border-radius: 0;
+}
+.active span{
+    background-color: $blue !important;
+}
+.owl-dot span:hover {
+    background-color: $blue !important;
+}
+.owl-prev, .owl-next {
+    position: absolute;
+    bottom: -45px;
+
+}
+.owl-theme .owl-nav [class*=owl-] {
+    margin: 0;
+}
+.owl-theme .owl-nav {
+    margin-top: 40px;
+}
+.owl-prev {
+    left: 0;
+}
+.owl-next {
+    left: 50px;
+}
+.owl-next span, .owl-nav span {
+    font-size: 70px;
+    font-weight: 100;
+}
+.owl-next span:hover {
+    background: transparent;
+}
+button:hover {
+    background-color: transparent !important;
+    color: $blue !important;
+}
+button span:hover {
+    background-color: transparent !important;
+}
+// End route
+
 .costs {
-    margin: 100px 0;
+    margin: 100px auto;
 
     .title__text {
         margin-bottom: 100px;
@@ -458,16 +589,7 @@ ul {
 .gallery {
     &-imgs {
         margin: 90px auto;
-        max-width: 1350px;
-    }
-    .openAll {
-        background: transparent;
-        color: $black;
-        &__text {
-            font-weight: 500;
-            font-size: 12px;
-            border-bottom: 2px solid $black;
-        }
+        max-width: 1300px;
     }
     &-left {
         width: 35.5%;
@@ -520,6 +642,65 @@ ul {
 }
 // End gallery
 
+.reviews {
+    margin: 60px auto 150px auto;
+    overflow-x: hidden;
+    padding-bottom: 50px;
+
+    &-item {
+        width: 100%;
+        height: auto;
+        background-color: $gray;
+        border-radius: 10px;
+        padding: 30px 20px 30px 45px;
+
+        &__title {
+            font-size: 14px;
+            font-weight: 700;
+            color: $black;
+            margin-bottom: 20px;
+        }
+        &__text {
+            font-size: 14px;
+            font-weight: 500;
+            color: $black;
+            position: relative;
+            z-index: 2;
+        }
+        .quotation-marks {
+            max-width: 180px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+        }
+    }
+
+    &-carousel {
+        margin-top: 90px;
+    }
+    .review-photo {
+        min-width: 245px;
+        min-height: 245px;
+        border-radius: 10px;
+        margin-right: 28px;
+
+        &__png {
+            border-radius: 10px;
+            object-fit: cover;
+        }
+    }
+
+    
+    .owl-carousel .owl-stage-outer {
+        width: 1500px !important;
+        overflow-y: hidden;
+    }
+    .owl-theme .owl-dots .owl-dot span {
+        width: 250px;
+    }
+}
+// End reviews
 .form {
     position: relative;
 
@@ -585,11 +766,10 @@ ul {
     height: 100vh;
     z-index: 999;
     display: none;
-
     &-item {
         width: 90%;
         height: 90%;
-    }
+    }  
     &__img {
         object-fit: contain;
         border-radius: 25px;
