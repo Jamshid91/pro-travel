@@ -600,7 +600,7 @@ section {
   width: 140px;
 }
 
-.route .owl-theme .owl-dots, .route .owl-theme .owl-nav {
+.owl-theme .owl-dots, .owl-theme .owl-nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -608,57 +608,57 @@ section {
   margin-left: 100px;
 }
 
-.route .owl-theme .owl-dots .owl-dot span {
+.owl-theme .owl-dots .owl-dot span {
   height: 4px;
   margin: 0;
   -webkit-border-radius: 0;
           border-radius: 0;
 }
 
-.route .active span {
+.active span {
   background-color: #0499DD !important;
 }
 
-.route .owl-dot span:hover {
+.owl-dot span:hover {
   background-color: #0499DD !important;
 }
 
-.route .owl-prev, .route .owl-next {
+.owl-prev, .owl-next {
   position: absolute;
   bottom: -45px;
 }
 
-.route .owl-theme .owl-nav [class*=owl-] {
+.owl-theme .owl-nav [class*=owl-] {
   margin: 0;
 }
 
-.route .owl-theme .owl-nav {
+.owl-theme .owl-nav {
   margin-top: 40px;
 }
 
-.route .owl-prev {
+.owl-prev {
   left: 0;
 }
 
-.route .owl-next {
+.owl-next {
   left: 50px;
 }
 
-.route .owl-next span, .route .owl-nav span {
+.owl-next span, .owl-nav span {
   font-size: 70px;
   font-weight: 100;
 }
 
-.route .owl-next span:hover {
+.owl-next span:hover {
   background: transparent;
 }
 
-.route button:hover {
+button:hover {
   background-color: transparent !important;
   color: #0499DD !important;
 }
 
-.route button span:hover {
+button span:hover {
   background-color: transparent !important;
 }
 
