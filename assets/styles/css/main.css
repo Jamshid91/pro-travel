@@ -1161,6 +1161,9 @@ button span:hover {
   .costs .description-card {
     min-width: 120px !important;
   }
+  .costs .tab {
+    margin-top: 70px;
+  }
   .information {
     display: none;
   }
@@ -1221,6 +1224,9 @@ button span:hover {
   }
   .description .tab_card {
     margin-top: 75px;
+  }
+  .costs .tab {
+    margin-top: 0;
   }
   .costs .tab_card {
     margin-bottom: 70px !important;
