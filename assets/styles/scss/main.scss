@@ -174,7 +174,7 @@ section {
             &:hover {
                 color: $white !important;
             }
-        }
+        } 
     }
 }
 
@@ -894,12 +894,20 @@ button span:hover {
     display: none;
     &-item {
         width: 90%;
-        height: 90%;
+        height: 95vh;
+
+        .item {
+            width: 100%;
+            height: 95vh;
+        }
     }  
     &__img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
         object-fit: contain;
-        border-radius: 25px;
         border-radius: 10px;
+        border-radius: 20px;
     }
     .close__photo {
         position: absolute;
@@ -909,6 +917,11 @@ button span:hover {
         border-radius: 10px;
         background-color: tomato;
         color: #fff;
+        z-index: 99;
+        &:hover {
+            background-color: tomato !important;
+            color: #fff !important;
+        }
     }
     .filter {
         position: absolute;
@@ -918,6 +931,19 @@ button span:hover {
         height: 100%;
         backdrop-filter: blur(20px);
         z-index: -1;
+    }
+    .owl-nav {
+        position: absolute;
+        bottom: 80px;
+        right: 40px;
+    }
+    .owl-next span,
+    .owl-prev span {
+        font-weight: 500;
+        color: $blue;
+    }
+    .owl-dots {
+        display: none;
     }
 }
 

@@ -1114,16 +1114,24 @@ button span:hover {
 
 .big-photo-item {
   width: 90%;
-  height: 90%;
+  height: 95vh;
+}
+
+.big-photo-item .item {
+  width: 100%;
+  height: 95vh;
 }
 
 .big-photo__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  -webkit-border-radius: 25px;
-          border-radius: 25px;
   -webkit-border-radius: 10px;
           border-radius: 10px;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
 }
 
 .big-photo .close__photo {
@@ -1135,6 +1143,12 @@ button span:hover {
           border-radius: 10px;
   background-color: tomato;
   color: #fff;
+  z-index: 99;
+}
+
+.big-photo .close__photo:hover {
+  background-color: tomato !important;
+  color: #fff !important;
 }
 
 .big-photo .filter {
@@ -1146,6 +1160,33 @@ button span:hover {
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
   z-index: -1;
+}
+
+.big-photo .owl-nav {
+  position: absolute;
+  bottom: 80px;
+  right: 40px;
+}
+
+.big-photo .owl-next span,
+.big-photo .owl-prev span {
+  font-weight: 500;
+  color: #0499DD;
+}
+
+.big-photo .owl-dots {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .big-photo .owl-nav {
+    position: absolute;
+    bottom: 20px;
+    right: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
 }
 
 @media (max-width: 992px) {
@@ -1206,9 +1247,6 @@ button span:hover {
   }
   .container {
     padding: 0 70px;
-  }
-  .header {
-    height: 100vh;
   }
   .header .desctop_menu {
     display: none;
@@ -1546,6 +1584,14 @@ button span:hover {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+  }
+  .big-photo .owl-nav {
+    position: absolute;
+    bottom: 20px;
+    right: 95%;
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
   }
 }
 
